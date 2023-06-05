@@ -60,7 +60,6 @@ The actor optimized to run blazing fast and scrape as many items as possible. Th
     "https://www.shopwss.com/collections/classic-womens"
   ],
   "search": "nike",
-  "includeReviews": false,
   "proxy": {
     "useApifyProxy": true
   },
