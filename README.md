@@ -1,3 +1,5 @@
+[https://apify.com/epctex/shopwss-scraper](https://apify.com/epctex/shopwss-scraper?fpr=yhdrb)
+
 # Actor - ShopWSS Scraper
 
 ## ShopWSS scraper
@@ -12,9 +14,9 @@ The ShopWSS data scraper supports the following features:
 
 -   Search - You can use the search input and fetch all products for a given keyword
 
--   Product detail - Fetch all product details including title, descriptio, images, variants, options and many more
+-   Product detail - Fetch all product details including title, description, images, variants, options, and many more
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/shopwss-scraper/issues).
 
@@ -25,31 +27,31 @@ The input of this scraper should be JSON containing the list of pages on ShopWSS
 
 - `search`: (Optional) (String) Keyword that you want to search on ShopWSS.
 
-- `startUrls`: (Optional) (Array) List of ShopWSS URLs. You should only provide collections, search urls and product detail urls.
+- `startUrls`: (Optional) (Array) List of ShopWSS URLs. You should only provide collections, search URLs, and product detail URLs.
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
 
 - `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
 
 - `proxy`: (Required) (Proxy Object) Proxy configuration.
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
 
-- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
+- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
 ### Tip
 
-When you want to have a scrape over a specific list URL, just copy and paste the link as one of the **startUrl**.
+When you want to scrape over a specific list URL, just copy and paste the link as one of the **startUrl**.
 
 If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
 
-With the last approach that explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
 
 ### Compute Unit Consumption
 
-The actor optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all the detail requests. If actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.01-0.03 compute units.
+The actor is optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all the detailed requests. If the actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.01-0.03 compute units.
 
 ### ShopWSS Scraper Input example
 
@@ -59,7 +61,7 @@ The actor optimized to run blazing fast and scrape as many items as possible. Th
     "https://www.shopwss.com/products/t770_nkwh_nk_xvh?variant=39713821065271",
     "https://www.shopwss.com/collections/classic-womens"
   ],
-  "search": "nike",
+  "search": "nike",  
   "proxy": {
     "useApifyProxy": true
   },
@@ -73,13 +75,13 @@ The actor optimized to run blazing fast and scrape as many items as possible. Th
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## ShopWSS Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this ShopWSS actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this ShopWSS actor.
 
 ## Scraped ShopWSS Properties
 
@@ -616,4 +618,4 @@ The structure of each item in ShopWSS looks like this:
 ```
 
 ## Contact 
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
